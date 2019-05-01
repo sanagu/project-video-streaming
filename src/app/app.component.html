@@ -10,7 +10,7 @@
           </div>
           <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; </span>
           &nbsp;&nbsp;
-          <a class="navbar-brand" href="#" style="color:black">Youthoob</a>
+          <a routerLink="home" class="navbar-brand" href="#" style="color:black">Youthoob</a>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <div class="collapse navbar-collapse d-flex justify-content-center" style="widows: 400px;"
               id="navbarSupportedContent">
@@ -24,7 +24,7 @@
               <a href="#"><img src="assets/images/upload.png" style="width: 25%; height: 25%"></a>
           </div>
           <div>
-              <button type="button" class="btn btn-primary" id="premium" (click)="openPremium()">Premium</button>&nbsp;&nbsp;
+              <button routerLink="premium" type="button" class="btn btn-primary" id="premium">Premium</button>&nbsp;&nbsp;
               <button type="button" routerLink="/premium" id="login" class="btn btn-primary" onclick="location.href">Sign In</button>
           </div>
           <div>
@@ -35,60 +35,6 @@
           </div>
       </nav>
   </div>
-  <div class="container container-fluid pb-video-container" style="text-align: center">
-      <div class="col-md-10 col-md-offset-1" style="display: inline">
-          <div class="row pb-row text-center">
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/K68UrdUOr2Y?list=RDzuAcaBkcYGE?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">Claydee - Alena</label> -->
-              </div>
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/wjT2JVlUFY4?list=RDzuAcaBkcYGE?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">Manuel Riva - Mhm Mhm</label> -->
-              </div>
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame " width="100%" height="230"
-                      src="https://www.youtube.com/embed/papuvlVeZg8?list=RDzuAcaBkcYGE?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">Clean Bandit - Rockabye</label> -->
-              </div>
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/Y1_VsyLAGuk?list=RDzuAcaBkcYGE?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">Burak Yeter - Tuesday</label> -->
-              </div>
-          </div>
-          <div class="row pb-row">
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/UY1bt8ilps4?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">F.O. and Peeva - Lichnata</label> -->
-              </div>
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/QpbQ4I3Eidg?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">Machine Gun - Bad Things</label> -->
-              </div>
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/h3kRIxLruDs?ecver=" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">INNA - Say it with your body</label> -->
-              </div>
-              <div class="col-md-3 pb-video">
-                  <iframe class="pb-video-frame" width="100%" height="230"
-                      src="https://www.youtube.com/embed/Jr4TMIU9oQ4?ecver=1" frameborder="0"
-                      allowfullscreen></iframe>
-                  <!-- <label class="form-control label-warning text-center">INNA - Gimme Gimme</label> -->
-              </div>
-          </div>
-      </div>
-  </div>
+  <br>
+  <router-outlet></router-outlet>
 </div>
