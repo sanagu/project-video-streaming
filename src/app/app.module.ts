@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { WelcomeComponent } from './welcome.component';
 import { PremiumModule } from './premium/premium.module';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { PremiumModule } from './premium/premium.module';
     AppComponent, WelcomeComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes), PremiumModule
+    BrowserModule, RouterModule.forRoot(appRoutes), PremiumModule, UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
