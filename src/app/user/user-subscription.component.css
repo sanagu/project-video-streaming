@@ -1,0 +1,9 @@
+hr{
+    height: 1px;
+    color: red;
+    background-color: white;
+    border: none;
+}
+.container{
+    color: white;  
+}

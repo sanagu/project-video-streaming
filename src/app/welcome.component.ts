@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     templateUrl: "./welcome.component.html",
-    selector: "app-home"
+    styleUrls:['./welcome.component.css']
 })
 export class WelcomeComponent{
 
