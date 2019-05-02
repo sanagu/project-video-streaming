@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 import { userRoutes } from './user.routes';
 import { SignupComponent } from './user-signup.component';
 import { SubscriptionComponent } from './user-subscription.component';
+import { UploadComponent } from './user-upload.component';
+import { LikedVideosComponent } from './user-liked-videos.component';
 
 
 @NgModule({
-   declarations: [LoginComponent, SignupComponent, SubscriptionComponent],
+   declarations: [LoginComponent, SignupComponent, UploadComponent, LikedVideosComponent, SubscriptionComponent],
    imports: [BrowserModule, RouterModule.forChild(userRoutes)],
-   exports: [LoginComponent, SignupComponent, SubscriptionComponent, RouterModule]
+   exports: [LoginComponent, SignupComponent, LikedVideosComponent, SubscriptionComponent,UploadComponent, RouterModule]
 })
 export class UserModule { }

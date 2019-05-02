@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'fun-video';
-  isAvailable = true;
+  isAvailable = false;
  openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";

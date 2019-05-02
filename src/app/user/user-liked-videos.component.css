@@ -1,0 +1,12 @@
+h2{
+    color: white;
+    text-align: center;
+}
+hr{
+    background: white;
+    border-width: 2px;
+}
+label{
+    background: orange;
+    font-weight: bold;
+}
