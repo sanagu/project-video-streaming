@@ -10,12 +10,13 @@ import { LikedVideosComponent } from './user-liked-videos.component';
 import { UserService } from './user.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './user-logout.component';
 
 
 @NgModule({
-   declarations: [LoginComponent, SignupComponent, UploadComponent, LikedVideosComponent, SubscriptionComponent],
+   declarations: [LoginComponent,LogoutComponent,SignupComponent, UploadComponent, LikedVideosComponent, SubscriptionComponent],
    imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule.forChild(userRoutes)],
-   exports: [LoginComponent, SignupComponent, LikedVideosComponent, SubscriptionComponent,UploadComponent, RouterModule],
+   exports: [LoginComponent, LogoutComponent,SignupComponent, LikedVideosComponent, SubscriptionComponent,UploadComponent, RouterModule],
    providers: [UserService]
 })
 export class UserModule { }

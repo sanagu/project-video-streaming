@@ -27,9 +27,13 @@
       </div> -->
       <div>
           <button routerLink="premium" type="button" class="btn btn-primary" id="premium">Premium</button>&nbsp;&nbsp;
-        <button *ngIf="isAvailable; else condition1" routerLink="signin" type="button" class="btn btn-primary"
-          id="signin">Sign In</button>
-        <ng-template #condition1>
+        <button  *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" routerLink="login" type="button" class="btn btn-primary"
+          id="signin">Sign In</button>&nbsp;
+          <button *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" routerLink="logout" type="button" class="btn btn-primary"
+          id="signin">Logout</button>
+          
+          <!-- *ngIf="isAvailable; else condition1" -->
+        <!-- <ng-template #condition1>
           <div class="btn-group open">
             <button type="button" class="btn btn-default navbar-btn pull-left" data-toggle="dropdown"
               id="rightProfileButton" aria-expanded="true">
@@ -45,7 +49,7 @@
                 </div>
                 <div class="pull-left">
                   <h2>Shinchan</h2>
-                  <!-- <div><small>developer@youphptube.com</small></div> -->
+                  
 
                 </div>
               </li>
@@ -90,7 +94,7 @@
 
             </ul>
           </div>
-        </ng-template>
+        </ng-template> -->
       </div>
       <div>
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"

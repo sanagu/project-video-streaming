@@ -4,10 +4,12 @@ import { SignupComponent } from './user-signup.component';
 import { SubscriptionComponent } from './user-subscription.component';
 import { UploadComponent } from './user-upload.component';
 import { LikedVideosComponent } from './user-liked-videos.component';
+import { LogoutComponent } from './user-logout.component';
 
 export const userRoutes: Routes = [
-    { path: "signin", component: LoginComponent },
+    { path: "login", component: LoginComponent },
     {path: "signup", component: SignupComponent},
+    {path:"logout", component :LogoutComponent},
     {path:"subscriptions", component: SubscriptionComponent},
     {path: "upload",component: UploadComponent},
     {path: "likedvideos", component: LikedVideosComponent}

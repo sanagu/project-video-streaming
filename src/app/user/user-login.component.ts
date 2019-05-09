@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { Router } from '@angular/router';
+import { UserModule } from './user.module';
+import { UserProfile } from './user';
+import { AuthenticationService } from './user-authenticate.service';
 
 
 @Component({
@@ -9,32 +12,24 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent{
     
-    signinFlag = true;
-    constructor(private userService: UserService,
-        private router: Router){}
 
-    userLogin(){
-        let email = (<HTMLInputElement>document.getElementById("email")).value;
-        let password= (<HTMLInputElement>document.getElementById("password")).value;
-        this.userService.userLogin(email, password).subscribe((data)=>{
-            if(data!=null)
-            {
-                alert("done");
-                this.signinFlag = false;
-                this.router.navigate([""]);
-            }
-                
-            this.signinFlag = true;
-
-        });
-    }
-
-    signIn():boolean{
-        if(this.signinFlag==undefined)
-            return true;
-        else
-            return false;
-    }
-    
-
-}
+        email = 'prangshu'
+        password = 'password'
+        invalidLogin = false
+      
+        constructor(private router: Router,
+          private loginservice: AuthenticationService) { }
+      
+        ngOnInit() {
+        }
+      
+        checkLogin() {
+          if (this.loginservice.authenticate(this.email, this.password)
+          ) {
+            this.router.navigate(['/home'])
+            this.invalidLogin = false
+          } else
+            this.invalidLogin = true
+        }
+      
+      }
