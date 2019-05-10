@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginComponent } from './user/user-login.component';
+import { AuthenticationService } from './user/user-authenticate.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,11 +8,16 @@ import { LoginComponent } from './user/user-login.component';
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'fun-video';
- isAvailable = LoginComponent.prototype.signIn();
+
+  
+  constructor(private loginService:AuthenticationService){ }
+  ngOnInit() {
+  }
+  
  openNav() {
-   alert(this.isAvailable);
+  //  alert(this.isAvailable);
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";

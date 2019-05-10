@@ -15,9 +15,15 @@ export class UserService{
         return this.http.post<UserProfile>(this.baseUrl+"/user",user);
     }
 
-    userLogin(email: string, password: string){
+    // userLogin(email: string, password: string){
+    //     return this.http.get(this.baseUrl+"/user/"+email+"/"+password);
+    // }
+
+    userLogin(email,password){
         return this.http.get(this.baseUrl+"/user/"+email+"/"+password);
+
     }
+
     uploadVideo(video:UserUploadVideo):Observable<UserUploadVideo>{
         return this.http.post<UserUploadVideo>(this.baseUrl+"/upload",video);
     }
