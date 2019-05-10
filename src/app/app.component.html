@@ -22,80 +22,75 @@
       <div>
         <a routerLink="upload"><img src="assets/images/upload.png" style="width: 25%; height: 25%"></a>
       </div>
-      <!-- <div>
-        <button routerLink="premium" type="button" class="btn btn-primary" id="premium">Premium</button>&nbsp;&nbsp;
-      </div> -->
+
       <div>
-          <button routerLink="premium" type="button" class="btn btn-primary" id="premium">Premium</button>&nbsp;&nbsp;
-        <button  *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" routerLink="login" type="button" class="btn btn-primary"
-          id="signin">Sign In</button>&nbsp;
-          <button *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" routerLink="logout" type="button" class="btn btn-primary"
-          id="signin">Logout</button>
-          
-          <!-- *ngIf="isAvailable; else condition1" -->
-        <!-- <ng-template #condition1>
-          <div class="btn-group open">
-            <button type="button" class="btn btn-default navbar-btn pull-left" data-toggle="dropdown"
-              id="rightProfileButton" aria-expanded="true">
-              <img src="assets/images/userdp.jpg" class="rounded-circle" alt="Cinque Terre" width="40" height="35">
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu" style="width: 210px">
+        <button routerLink="premium" type="button" class="btn btn-primary" id="premium">Premium</button>&nbsp;&nbsp;
+        <button *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" routerLink="login" type="button"
+          class="btn btn-primary" id="signin">Sign In</button>&nbsp;
+       
+
+        <div class="btn-group open" *ngIf="loginService.isUserLoggedIn()">
+          <button type="button" *ngIf="loginService.isUserLoggedIn()" class="btn btn-default navbar-btn pull-left"
+            data-toggle="dropdown" id="rightProfileButton" aria-expanded="true">
+            <img src="assets/images/userdp.jpg" class="rounded-circle" alt="Cinque Terre" width="40" height="35">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu" style="width: 210px">
 
 
-              <li>
-                <div class="pull-left" style="margin-left: 10px;">
-                  <img src="https://demo.youphptube.com/videos/userPhoto/photo1.png" style="max-width: 50px;"
-                    class="img img-responsive img-circle">
-                </div>
-                <div class="pull-left">
-                  <h2>Shinchan</h2>
-                  
+            <li>
+              <div class="pull-left" style="margin-left: 10px;">
+                <img src="https://demo.youphptube.com/videos/userPhoto/photo1.png" style="max-width: 50px;"
+                  class="img img-responsive img-circle">
+              </div>
+              <div class="pull-left">
+                <h2>Shinchan</h2>
 
-                </div>
-              </li>
-              <li>
-                <hr>
-              </li>
-              <li>
-                <a href="https://demo.youphptube.com/logoff">
-                  <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>
-                  <i class="fas fa-sign-out-alt"></i> Sign out </a>
-              </li>
-              <li>
-                <a href="https://demo.youphptube.com/user" style="border-radius: 4px 4px 0 0;">
-                  <span class="fa fa-user-circle"></span>
-                  My Account </a>
-              </li>
 
-              <li>
-                <a href="https://demo.youphptube.com/channel/TheAdminChannel">
-                  <span class="fab fa-youtube"></span>
-                  My Channel </a>
-              </li>
+              </div>
+            </li>
+            <li>
+              <hr>
+            </li>
+            <li>
+              <a routerLink="/logout" >
+                <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>
+                <i class="fas fa-sign-out-alt"></i> Sign out </a>
+            </li>
+            <li>
+              <a href="#" style="border-radius: 4px 4px 0 0;">
+                <span class="fa fa-user-circle"></span>
+                My Account </a>
+            </li>
 
-              <li>
-                <a href="https://demo.youphptube.com/mvideos">
-                  <span class="glyphicon glyphicon-film"></span>
-                  <span class="glyphicon glyphicon-headphones"></span>
-                  My videos </a>
-              </li>
-              <li>
-                <a routerLink="likedvideos">
-                  <span class="fas fa-tachometer-alt"></span>
-                  Liked Videos </a>
-              </li>
-              <li>
-                <a routerLink="subscriptions">
-                  <span class="fa fa-check"></span>
-                  Subscriptions </a>
-              </li>
+            <li>
+              <a href="#">
+                <span class="fab fa-youtube"></span>
+                My Channel </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-film"></span>
+                <span class="glyphicon glyphicon-headphones"></span>
+                My videos </a>
+            </li>
+            <li>
+              <a routerLink="likedvideos">
+                <span class="fas fa-tachometer-alt"></span>
+                Liked Videos </a>
+            </li>
+            <li>
+              <a routerLink="subscriptions">
+                <span class="fa fa-check"></span>
+                Subscriptions </a>
+            </li>
 
 
 
-            </ul>
-          </div>
-        </ng-template> -->
+          </ul>
+        </div>
       </div>
+
       <div>
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"

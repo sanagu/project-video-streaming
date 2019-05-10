@@ -7,12 +7,12 @@ export class AuthenticationService {
 
   constructor() { }
 
-  authenticate(username, password) {
-    if (username === "prangshu" && password === "password") {
-      sessionStorage.setItem('username', username)
-      return true;
-    } else {
+  authenticate(flag,username) {
+    if (flag) {
+      sessionStorage.setItem('username',username)
       return false;
+    } else {
+      return true;
     }
   }
 

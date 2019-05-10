@@ -19,8 +19,8 @@ export class UserService{
     //     return this.http.get(this.baseUrl+"/user/"+email+"/"+password);
     // }
 
-    userSignIn(acceptedUser){
-        return this.http.get(this.baseUrl+"/user/"+acceptedUser);
+    userLogin(email,password){
+        return this.http.get(this.baseUrl+"/user/"+email+"/"+password);
 
     }
 
