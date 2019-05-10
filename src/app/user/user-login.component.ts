@@ -7,11 +7,16 @@ import { Router } from '@angular/router';
     templateUrl:"./user-login.component.html",
     styleUrls : ["./user-login.component.css"]
 })
-export class LoginComponent{
+export class LoginComponent implements OnInit{
     
-    signinFlag = true;
+    signinFlag = false;
+
     constructor(private userService: UserService,
         private router: Router){}
+
+        ngOnInit(){
+
+        }
 
     userLogin(){
         let email = (<HTMLInputElement>document.getElementById("email")).value;

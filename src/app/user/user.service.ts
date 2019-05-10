@@ -7,7 +7,7 @@ import { UserUploadVideo } from './uploadVideo';
 @Injectable()
 export class UserService{
 
-    baseUrl = "http://localhost:8011";
+    baseUrl = "http://localhost:8000";
 
     constructor(private http: HttpClient){}
 
